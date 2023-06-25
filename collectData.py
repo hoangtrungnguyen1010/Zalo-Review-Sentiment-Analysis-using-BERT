@@ -19,13 +19,13 @@ df = pd.DataFrame(np.array(us_reviews),columns=['review'])
 df = df.join(pd.DataFrame(df.pop('review').tolist()))
 df.to_csv("Dataset/dataset.csv", index=True)
 
-for i in range(1, len(applist)):
-    us_reviews = reviews_all(
-    applist[i],
-    sleep_milliseconds=0, # defaults to 0
-    sort=Sort.NEWEST, # defaults to Sort.MOST_RELEVANT
-    )
+# for i in range(1, len(applist)):
+#     us_reviews = reviews_all(
+#     applist[i],
+#     sleep_milliseconds=0, # defaults to 0
+#     sort=Sort.NEWEST, # defaults to Sort.MOST_RELEVANT
+#     )
 
-    df = pd.DataFrame(np.array(us_reviews),columns=['review'])
-    df = df.join(pd.DataFrame(df.pop('review').tolist()))
-    df.to_csv("Dataset/dataset.csv", mode = 'a', index=False, header = False)
+#     df = pd.DataFrame(np.array(us_reviews),columns=['review'])
+#     df = df.join(pd.DataFrame(df.pop('review').tolist()))
+#     df.to_csv("Dataset/dataset.csv", mode = 'a', index=False, header = False)
